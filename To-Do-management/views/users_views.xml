@@ -1,0 +1,52 @@
+<odoo>
+    <record id="users_view_tree" model="ir.ui.view">
+        <field name="name">users tree</field>
+        <field name="model">todo.user</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1">
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="address"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="users_view_form" model="ir.ui.view">
+        <field name="name">users form</field>
+        <field name="model">todo.user</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class = "oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="phone"/>
+                            <field name="address"/>
+                        </group>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="users_action" model="ir.actions.act_window">
+        <field name="name">Users</field>
+        <field name="res_model">todo.user</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="users_menu_item"
+        name="todo.user"
+        parent="users_menu"
+        action="users_action"
+    />
+</odoo>

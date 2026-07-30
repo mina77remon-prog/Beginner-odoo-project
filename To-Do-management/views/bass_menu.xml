@@ -1,0 +1,24 @@
+<odoo>
+
+    <menuitem
+        id= "todo_root_menu"
+        name = "to do"
+        web_icon="todo_management,static/description/icon.png"
+    />
+
+    <menuitem
+        id= "to_do_menu"
+        name = "to do"
+        parent = "todo_root_menu"
+    />
+
+
+    <menuitem
+        id= "users_menu"
+        name = "Users"
+        parent = "todo_root_menu"
+
+    />
+
+</odoo>
+
